@@ -48,7 +48,7 @@
   <el-dialog align-center style="width: 90%;max-width: 700px;" v-model="downLoadAPPTableVisible" title="APP下载">
     <div>
       <el-button style="float:right;margin-top: -5px;" type="primary"
-        @click="open('https://static.netart.cn/network-panel-app/v3.2.4.apk')">
+        @click="open('https://static.netart.cn/network-panel-app/v3.2.5.apk')">
         下载最新版
       </el-button>
       <h2>网络面板APP</h2>
@@ -60,6 +60,12 @@
     </div>
     <div>
       <h2>更新日志</h2>
+	  <div>
+        <h3>v3.2.5</h3>
+        <p>
+          核心部分使用go语言实现，优化性能与稳定性<br>
+        </p>
+      </div>
       <div>
         <h3>v3.2.4</h3>
         <p>
