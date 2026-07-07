@@ -14,10 +14,10 @@
           <span class="title"> 网络面板 </span>
         </div>
         <div style="float: right;margin-top: 5px;">
-          <el-button class="home" @click="aboutVisible=true" round>关于</el-button>
+          <el-button class="home" @click="aboutVisible = true" round>关于</el-button>
         </div>
         <div v-if="isAndroid" style="float: right;margin-top: 5px;margin-right: 5px;">
-          <el-button class="home" @click="downLoadAPPTableVisible=true" round>APP</el-button>
+          <el-button class="home" @click="downLoadAPPTableVisible = true" round>APP</el-button>
         </div>
       </div>
     </el-header>
@@ -35,10 +35,11 @@
       <div style="width: fit-content;margin-left: auto;margin-right: auto;">
         <span style="color:var(--el-color-info);font-size: 12px;">
           本工具由
-            <el-link style="vertical-align: -2px;" type="info" @click='open("https://edgeone.ai/zh?from=net.netart.cn")' target="_blank">
-              <img src="https://edgeone.ai/favicon.ico" alt="括彩CDN" width="15" height="15">
-              Tencent Edgeone
-            </el-link>
+          <el-link style="vertical-align: -2px;" type="info" @click='open("https://edgeone.ai/zh?from=net.netart.cn")'
+            target="_blank">
+            <img src="https://edgeone.ai/favicon.ico" alt="括彩CDN" width="15" height="15">
+            Tencent Edgeone
+          </el-link>
           提供CDN服务
         </span>
       </div>
@@ -46,11 +47,12 @@
   </el-container>
   <el-dialog align-center style="width: 90%;max-width: 700px;" v-model="downLoadAPPTableVisible" title="APP下载">
     <div>
-      <el-button style="float:right;margin-top: -5px;" type="primary" @click="open('https://cdn.netart.cn/network-panel-app/v3.2.2.apk')">
-          下载最新版
-      </el-button> 
+      <el-button style="float:right;margin-top: -5px;" type="primary"
+        @click="open('https://static.netart.cn/network-panel-app/v3.2.3.apk')">
+        下载最新版
+      </el-button>
       <h2>网络面板APP</h2>
-      <span>Java原生实现</span><br> 
+      <span>Java原生实现</span><br>
       <span>1.支持锁屏运行</span><br>
       <span>2.支持添加任何链接</span><br>
       <span>3.相对于浏览器更加省电</span><br>
@@ -58,18 +60,30 @@
     </div>
     <div>
       <h2>更新日志</h2>
-	  <div>
-        <h3>v3.2.2</h3>
+      <div>
+        <h3>v3.2.3</h3>
         <p>
-		  修复数据上报问题<br>
+          修复无法打开的问题<br>
         </p>
       </div>
-	  <div>
+      <div>
+        <h3>v3.2.2</h3>
+        <p>
+          修复数据上报问题<br>
+        </p>
+      </div>
+      <div>
+        <h3>v3.2.2</h3>
+        <p>
+          修复数据上报问题<br>
+        </p>
+      </div>
+      <div>
         <h3>v3.2.1</h3>
         <p>
           1.添加链接时可选“增强并发”开关(v2.7~v3.1此功能全局开启)<br>
-		  2.修复从通知栏退出后再打开总流量不清零问题<br>
-		  3.修复部分链接暂停之后再启动没有速度的问题<br>
+          2.修复从通知栏退出后再打开总流量不清零问题<br>
+          3.修复部分链接暂停之后再启动没有速度的问题<br>
         </p>
       </div>
       <div>
@@ -119,7 +133,7 @@
         <h3>v2.3</h3>
         <p>
           1.新增上传测速功能<br>
-            (建议不超过2个线程)<br>
+          (建议不超过2个线程)<br>
         </p>
       </div>
       <div>
@@ -136,15 +150,15 @@
       <div>
         <h3>v2.1</h3>
         <p>
-        1.修复了2.0版本部分链接跑一会儿没速度的问题，修复了一个增加耗电的问题<br> 
-        2.核心功能完全由原生Java层接管，省电不发热的同时可以保后台，实测小米6黑屏后台运行12小时不掉<br> 
-        3.同步近期网页版更新内容<br> <br> 
-        保后台条件:<br> 
-        1.通知栏能够正常显示进度信息（如果没有看到通知，去设置检查通知权限）<br> 
-        2.加入电池优化白名单（如果没有加入，打开app会弹窗要求加入）<br> 
-        如果部分老旧机型打开白屏，请
-        <el-link @click="open('https://api.netart.cn/d?b013x2a3i')" type="primary">点此下载</el-link>
-        webview内核，并在开发者选项内启用该内核后重试
+          1.修复了2.0版本部分链接跑一会儿没速度的问题，修复了一个增加耗电的问题<br>
+          2.核心功能完全由原生Java层接管，省电不发热的同时可以保后台，实测小米6黑屏后台运行12小时不掉<br>
+          3.同步近期网页版更新内容<br> <br>
+          保后台条件:<br>
+          1.通知栏能够正常显示进度信息（如果没有看到通知，去设置检查通知权限）<br>
+          2.加入电池优化白名单（如果没有加入，打开app会弹窗要求加入）<br>
+          如果部分老旧机型打开白屏，请
+          <el-link @click="open('https://api.netart.cn/d?b013x2a3i')" type="primary">点此下载</el-link>
+          webview内核，并在开发者选项内启用该内核后重试
         </p>
       </div>
     </div>
@@ -155,19 +169,23 @@
       <span>作者：<el-link @click='open("https://netart.cn/")' type="primary">Whoami</el-link></span><br>
       <span>QQ：<el-link type="primary" @click="copyText('582424565')">582424565 </el-link></span><br>
       <span>QQ群：<el-link type="primary" @click="copyText('463481772')">463481772 </el-link></span><br>
-      <span>开源地址：<el-link @click='open("https://github.com/ljxi/NetworkPanel")' type="primary">NetworkPanel</el-link>&nbsp;
+      <span>开源地址：<el-link @click='open("https://github.com/ljxi/NetworkPanel")'
+          type="primary">NetworkPanel</el-link>&nbsp;
         <el-link @click='open("https://github.com/ljxi/GeoCN")' type="primary">GeoCN</el-link>
-      </span><br> 
+      </span><br>
       <span>特别感谢：</span><br>
-      <el-link @click='open("https://edgeone.ai/zh?from=net.netart.cn")' type="primary">Tencent Edgeone</el-link><span>提供免费稳定无限量的CDN服务</span><br>
-      <el-link @click='open("https://www.kuocaicdn.com/register?code=8z8urvbg2ffd9")' type="primary">括彩科技</el-link><span>提供免费稳定的CDN服务</span><br>
+      <el-link @click='open("https://edgeone.ai/zh?from=net.netart.cn")' type="primary">Tencent
+        Edgeone</el-link><span>提供免费稳定无限量的CDN服务</span><br>
+      <el-link @click='open("https://www.kuocaicdn.com/register?code=8z8urvbg2ffd9")'
+        type="primary">括彩科技</el-link><span>提供免费稳定的CDN服务</span><br>
       <br>
       <span>本项目用到的开源库:</span><br>
       <el-link @click='open("https://github.com/vuejs/core")' type="primary">Vue</el-link>&nbsp
       <el-link @click='open("https://github.com/element-plus/element-plus")' type="primary">ElementPlus</el-link>&nbsp
       <el-link @click='open("https://github.com/apache/echarts")' type="primary">echarts</el-link>&nbsp
       <el-link @click='open("https://github.com/richtr/NoSleep.js")' type="primary">NoSleep.js</el-link>&nbsp
-      <el-link @click='open("https://github.com/soerenmartius/vue3-clipboard")' type="primary">vue3-clipboard</el-link>&nbsp
+      <el-link @click='open("https://github.com/soerenmartius/vue3-clipboard")'
+        type="primary">vue3-clipboard</el-link>&nbsp
     </div>
     <div>
       <h2>疑问解答</h2>
@@ -201,26 +219,26 @@ import { toClipboard } from '@soerenmartius/vue3-clipboard'
 var isAndroid = /Android/i.test(navigator.userAgent)
 const isVisible = ref(true)
 const downLoadAPPTableVisible = ref(false)
-if(window.location.hash=='#app')downLoadAPPTableVisible.value=true
+if (window.location.hash == '#app') downLoadAPPTableVisible.value = true
 
-const clearHash=()=>{
+const clearHash = () => {
   history.replaceState(null, document.title,
-  window.location.pathname + window.location.search);
+    window.location.pathname + window.location.search);
 }
-watch(downLoadAPPTableVisible,(n)=>{
-  if(!n){
+watch(downLoadAPPTableVisible, (n) => {
+  if (!n) {
     clearHash()
-  }else{
-    window.location.hash='#app'
+  } else {
+    window.location.hash = '#app'
   }
 })
 
 const aboutVisible = ref(false)
-const open = (url:string) => {
+const open = (url: string) => {
   window.open(url)
 }
 
-let copyText = (txt:string) => {
+let copyText = (txt: string) => {
   toClipboard(txt)
   ElMessage.info({
     dangerouslyUseHTMLString: true,
@@ -234,13 +252,15 @@ document.addEventListener("visibilitychange", function () {
 })
 </script>
 
-<style scoped>  
+<style scoped>
 .question {
   margin-top: 10px;
 }
+
 .ask {
   color: #6071ee;
 }
+
 .header {
   height: fit-content;
   padding-bottom: 12px;
@@ -257,37 +277,43 @@ document.addEventListener("visibilitychange", function () {
   color: #526484;
   font-size: 12px;
 }
+
 .icon {
-  display:inline-block;
+  display: inline-block;
   vertical-align: -6px;
   width: 40px;
   height: 40px;
   background-color: #5668EE;
   border-radius: 20%;
 }
+
 .icon svg {
   width: 30px;
   margin-left: 5px;
 }
-.card{
-    max-width: 800px;
-    height:fit-content;
-    display: block;
-    margin:0 auto;
-    background-color:#ffffff;
-    padding:2%;
-    border-radius: 20px;
+
+.card {
+  max-width: 800px;
+  height: fit-content;
+  display: block;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 2%;
+  border-radius: 20px;
 }
-.banner{
+
+.banner {
   margin-top: 15px;
 }
-.banner > img {
+
+.banner>img {
   height: 70px;
   width: calc(100% - 20px);
   margin: 10px;
   border-radius: 20px;
 }
-.banner > span{
+
+.banner>span {
   position: relative;
   display: block;
   left: 15px;
@@ -295,13 +321,15 @@ document.addEventListener("visibilitychange", function () {
   color: transparent;
   font-weight: bolder;
   background-clip: text;
-  background-image: linear-gradient(to right,#37CAC6, #3D95F4 80px);
+  background-image: linear-gradient(to right, #37CAC6, #3D95F4 80px);
 
 }
+
 @media (prefers-color-scheme: dark) {
   .card {
-        background-color:rgb(18,18,18);
-    }
+    background-color: rgb(18, 18, 18);
+  }
+
   .header {
     background-color: rgb(18, 18, 18);
   }
@@ -313,4 +341,5 @@ document.addEventListener("visibilitychange", function () {
   .home {
     color: rgb(152, 167, 202);
   }
-}</style>
+}
+</style>
