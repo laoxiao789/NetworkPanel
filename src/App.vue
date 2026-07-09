@@ -48,7 +48,7 @@
   <el-dialog align-center style="width: 90%;max-width: 700px;" v-model="downLoadAPPTableVisible" title="APP下载">
     <div>
       <el-button style="float:right;margin-top: -5px;" type="primary"
-        @click="open('https://static.netart.cn/network-panel-app/v3.2.6.apk')">
+        @click="open('https://static.netart.cn/network-panel-app/v3.2.7.apk')">
         下载最新版
       </el-button>
       <h2>网络面板APP</h2>
@@ -60,6 +60,14 @@
     </div>
     <div>
       <h2>更新日志</h2>
+      <div>
+        <h3>v3.2.7</h3>
+        <p>
+          1.支持自动识别剪切板中的链接并一键导入<br>
+          2.修复小米系统通知栏默认隐藏按钮的问题<br>
+          3.修复一些已知问题<br>
+        </p>
+      </div>
 	    <div>
         <h3>v3.2.6</h3>
         <p>
